@@ -29,4 +29,5 @@ const readText = (callback) => {
     }
 }
 
+document.querySelector('#process-button').addEventListener('click', Execute);
 
