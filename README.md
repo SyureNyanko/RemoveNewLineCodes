@@ -1,2 +1,2 @@
 # syurenyanko
-LF Reduction
+Remove all line feed codes from your Clipboard.
