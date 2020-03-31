@@ -24,7 +24,8 @@ function process(input){
 
 function writeText(text){
     if(navigator.clipboard){
-        navigator.clipboard.writeText(process(text));
+        text = process(text);
+        navigator.clipboard.writeText(text);
     }
 }
 
@@ -44,5 +45,4 @@ const readText = (callback) => {
 
 document.querySelector('#process-button').addEventListener('click', Execute);
 document.querySelector('#process-button-google').addEventListener('click', ExecuteAndJumpToGoogle);
-
 
