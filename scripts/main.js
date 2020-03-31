@@ -1,7 +1,6 @@
 function Execute(){
     const result = readText(
         (text) => {
-            console.log(text);
             writeText(text);
         }
     );
@@ -9,9 +8,7 @@ function Execute(){
 function ExecuteAndJumpToGoogle(){
     const result = readText(
         (text) => {
-            console.log(text);
-            writeText(text);
-            createOrRefreshSubWindow(text);
+            createOrRefreshSubWindow(process(text));
         }
     );
 }
@@ -20,7 +17,6 @@ function createOrRefreshSubWindow(text) {
     const url =  encodeURI("https://translate.google.co.jp/?hl=ja#view=home&op=translate&sl=en&tl=ja&text=" + text);
     window.open(url, "subWindow");
 }
-
 
 function process(input){
     return input.replace(/\r?\n/g, '');
