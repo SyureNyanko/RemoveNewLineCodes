@@ -19,7 +19,7 @@ function createOrRefreshSubWindow(text) {
 }
 
 function process(input){
-    return input.replace(/\r?\n/g, '');
+    return input.replace(/ +/g, ' ').replace(/\r?\n/g, ' ');
 }
 
 function writeText(text){
